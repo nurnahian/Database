@@ -1,0 +1,64 @@
+create trigger trgSemester1_mark ON dbo.tbl_student
+
+for insert
+
+AS
+
+declare @st_registration varchar(50);
+declare @st_center_code int;
+
+select @st_registration=i.st_registration from inserted i;
+select @st_center_code=i.st_center_code from inserted i;
+
+insert into tbl_DCSA1201_mark1(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+insert into tbl_DCSA1302_mark1(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+insert into tbl_DCSA1303_mark1(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+insert into tbl_DCSA1304_mark1(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+
+insert into tbl_DCSA2301_mark2(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+insert into tbl_DCSA2302_mark2(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+insert into tbl_DCSA2303_mark2(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+insert into tbl_DCSA2304_mark2(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+
+insert into tbl_DCSA3301_mark3(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+insert into tbl_DCSA3302_mark3(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+insert into tbl_DCSA3303_mark3(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+insert into tbl_DCSA3304_mark3(
+st_registration,st_center_code)
+values(@st_registration,@st_center_code);
+
+go
+

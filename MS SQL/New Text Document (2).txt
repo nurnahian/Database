@@ -1,0 +1,103 @@
+USE [DCSA_DBA]
+GO
+
+/****** Object:  Trigger [TriggerStudent]    Script Date: 4/13/2022 2:36:23 PM ******/
+DROP TRIGGER [dbo].[TriggerStudent]
+GO
+
+/****** Object:  Trigger [dbo].[TriggerStudent]    Script Date: 4/13/2022 2:36:24 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE TRIGGER [dbo].[TriggerStudent] ON [dbo].[tbl_student]
+after INSERT 
+AS
+SET NOCOUNT ON;
+
+insert into tbl_DCSA1201_mark1
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+insert into tbl_DCSA1302_mark1
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+insert into tbl_DCSA1303_mark1
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+insert into tbl_DCSA1304_mark1
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+
+insert into tbl_DCSA2301_mark2
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+insert into tbl_DCSA2302_mark2
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+insert into tbl_DCSA2303_mark2
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+insert into tbl_DCSA2304_mark2
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+
+
+insert into tbl_DCSA3301_mark3
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+insert into tbl_DCSA3302_mark3
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+insert into tbl_DCSA3303_mark3
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+insert into tbl_DCSA3304_mark3
+       (st_registration,st_center_code)  
+       SELECT i.st_registration,i.st_center_code
+    FROM
+        inserted i
+
+
+GO
+
+ALTER TABLE [dbo].[tbl_student] ENABLE TRIGGER [TriggerStudent]
+GO
+
+

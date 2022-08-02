@@ -1,0 +1,63 @@
+create table tbl_DCSA2301_mark2(
+id int identity,
+st_registration varchar(50),
+subj_code varchar(50) default 'DCSA 2301',
+tma1 int,
+tma2 int,
+total_tma int,
+experiment int,
+record_book int,
+viva int,
+total_practical int,
+st_center_code int,
+submit_date date default SYSDATETIME(),
+constraint PK_id_DCSA2301 primary key(id)
+)
+
+create table tbl_DCSA2302_mark2(
+id int identity,
+st_registration varchar(50),
+subj_code varchar(50) default 'DCSA 2302',
+tma1 int,
+tma2 int,
+total_tma int,
+experiment int,
+record_book int,
+viva int,
+total_practical int,
+st_center_code int,
+submit_date date default SYSDATETIME(),
+constraint PK_id_DCSA2302 primary key(id)
+)
+
+create table tbl_DCSA2303_mark2(
+id int identity,
+st_registration varchar(50),
+subj_code varchar(50) default 'DCSA 2303',
+tma1 int,
+tma2 int,
+total_tma int,
+experiment int,
+record_book int,
+viva int,
+total_practical int,
+st_center_code int,
+submit_date date default SYSDATETIME(),
+constraint PK_id_DCSA2303 primary key(id)
+)
+
+create table tbl_DCSA2304_mark2(
+id int identity,
+st_registration varchar(50),
+subj_code varchar(50) default 'DCSA 2304',
+tma1 int,
+tma2 int,
+total_tma int,
+experiment int,
+record_book int,
+viva int,
+total_practical int,
+st_center_code int,
+submit_date date default SYSDATETIME(),
+constraint PK_id_DCSA2304 primary key(id)
+)

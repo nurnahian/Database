@@ -1,0 +1,58 @@
+create table tbl_DCSA3301_mark3(
+id int identity,
+st_registration varchar(50),
+subj_code varchar(50) default 'DCSA 3301',
+tma1 int,
+tma2 int,
+total_tma int,
+experiment int,
+record_book int,
+viva int,
+total_practical int,
+st_center_code int,
+submit_date date default SYSDATETIME(),
+constraint PK_id_DCSA3301 primary key(id)
+)
+
+create table tbl_DCSA3302_mark3(
+id int identity,
+st_registration varchar(50),
+subj_code varchar(50) default 'DCSA 3302',
+tma1 int,
+tma2 int,
+total_tma int,
+experiment int,
+record_book int,
+viva int,
+total_practical int,
+st_center_code int,
+submit_date date default SYSDATETIME(),
+constraint PK_id_DCSA3302 primary key(id)
+)
+
+create table tbl_DCSA3303_mark3(
+id int identity,
+st_registration varchar(50),
+subj_code varchar(50) default 'DCSA 3303',
+tma1 int,
+tma2 int,
+total_tma int,
+experiment int,
+record_book int,
+viva int,
+total_practical int,
+st_center_code int,
+submit_date date default SYSDATETIME(),
+constraint PK_id_DCSA3303 primary key(id)
+)
+
+create table tbl_DCSA3304_mark3(
+id int identity,
+st_registration varchar(50),
+subj_code varchar(50) default 'DCSA 3304',
+project_report int, 
+viva int,
+st_center_code int,
+submit_date date default SYSDATETIME(),
+constraint PK_id_DCSA3304 primary key(id)
+)

@@ -1,0 +1,35 @@
+DESKTOP-9HPLJID\SQLEXPRESS
+
+
+tbl_studyCenter tbl_studyCenter = db.tbl_studyCenter.Where(x=>x.study_center_id == id).FirstOrDefault();
+
+
+  public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            tbl_studyCenter tbl_studyCenter = db.tbl_studyCenter.Where(x=>x.study_center_id == id).FirstOrDefault();
+            if (tbl_studyCenter == null)
+            {
+                return HttpNotFound();
+            }
+            return View(tbl_studyCenter);
+        }
+
+
+DCSA 1201
+DCSA 1302
+DCSA 1303
+DCSA 1304
+
+DCSA 2301
+DCSA 2302
+DCSA 2303
+DCSA 2304
+
+DCSA 3201
+DCSA 3302
+DCSA 3303
+DCSA 3304

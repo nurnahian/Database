@@ -1,0 +1,71 @@
+new {@class= "btn btn-info btn-outline-dark" }
+
+class="table table-striped"
+
+
+
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield; /* Firefox */
+    }
+</style>
+
+
+class="form-horizontal bg-transparent border mt-5" style="max-width:550px;margin:auto;"
+
+class="btn btn-default btn-outline-dark mt-3 my-3" 
+
+------------------------------
+
+<div class="row">
+        <div class="form-horizontal bg-transparent border mt-5" style="max-width:550px;margin:auto;">
+------------------------------
+, new { @class = "btn btn-outline-warning" }
+, new { @class = "btn btn-outline-secondary" }
+
+, new { @class = "btn btn-outline-danger" }
+
+
+
+------------------------------
+
+
+@foreach (var item in Model.Select((x, i) => new { Data = x, Index = i }))
+{
+<tr>
+    <td>
+        @item.Index
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Data.studentName)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Data.studentID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Data.studentID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Data.studentID })
+    </td>
+</tr>
+
+@{ int i = 1; }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @i
+        </td>
+        @{ i++; }
+        <td>
+            @Html.DisplayFor(modelItem => item.studentName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.studentID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.studentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.studentID })
+        </td>
+   </tr>

@@ -1,0 +1,6 @@
+DESKTOP-9HPLJID\SQLEXPRESS
+
+
+Try regular expressions.
+
+[RegularExpression(@"^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.pdf|.PDF)$", ErrorMessage = "Incorrect file format")]
